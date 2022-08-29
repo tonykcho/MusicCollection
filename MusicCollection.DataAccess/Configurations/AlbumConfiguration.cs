@@ -20,5 +20,8 @@ public class AlbumConfiguration : IEntityTypeConfiguration<Album>
 
         builder
             .HasIndex(album => album.Id);
+
+        builder
+            .HasIndex(album => album.Guid);
     }
 }

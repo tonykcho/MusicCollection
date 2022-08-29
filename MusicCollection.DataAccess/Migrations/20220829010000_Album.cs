@@ -6,8 +6,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace MusicCollection.DataAccess.Migrations
 {
-    public partial class album : Migration
+    /// <inheritdoc />
+    public partial class Album : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -29,11 +31,17 @@ namespace MusicCollection.DataAccess.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Albums_Guid",
+                table: "Albums",
+                column: "Guid");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Albums_Id",
                 table: "Albums",
                 column: "Id");
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

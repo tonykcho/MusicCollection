@@ -12,14 +12,15 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MusicCollection.DataAccess.Migrations
 {
     [DbContext(typeof(MusicCollectionDbContext))]
-    [Migration("20220823034238_album")]
-    partial class album
+    [Migration("20220829010000_Album")]
+    partial class Album
     {
+        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("ProductVersion", "7.0.0-preview.7.22376.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -53,6 +54,8 @@ namespace MusicCollection.DataAccess.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Guid");
 
                     b.HasIndex("Id");
 

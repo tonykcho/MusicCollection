@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace MusicCollection.API.Controllers;
 
@@ -8,10 +9,12 @@ namespace MusicCollection.API.Controllers;
 public class AlbumsController : ControllerBase
 {
     private readonly IOutputCacheStore _outputCacheStore;
+    private readonly IDataProtectionProvider _dataProtectionProvider;
 
-    public AlbumsController(IOutputCacheStore outputCacheStore)
+    public AlbumsController(IOutputCacheStore outputCacheStore, IDataProtectionProvider dataProtectionProvider)
     {
         _outputCacheStore = outputCacheStore;
+        _dataProtectionProvider = dataProtectionProvider;
     }
 
     [HttpGet]

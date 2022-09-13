@@ -25,6 +25,7 @@ public static class WebApplicationExtension
             catch(Exception ex)
             {
                 logger.LogError(ex.Message, "--> An Error occured while migrating the database used on context");
+                throw;
             }
         }
     }

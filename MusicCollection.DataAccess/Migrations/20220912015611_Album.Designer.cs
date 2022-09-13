@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MusicCollection.DataAccess.Migrations
 {
     [DbContext(typeof(MusicCollectionDbContext))]
-    [Migration("20220829010000_Album")]
+    [Migration("20220912015611_Album")]
     partial class Album
     {
         /// <inheritdoc />

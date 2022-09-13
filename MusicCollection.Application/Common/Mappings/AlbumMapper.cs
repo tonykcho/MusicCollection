@@ -1,11 +1,11 @@
 using MusicCollection.Application.Dtos;
 using MusicCollection.Domain.Entities;
 
-namespace MusicCollection.Application.Mappings;
+namespace MusicCollection.Application.Common.Mappings;
 
 public class AlbumMapper
 {
-    static public AlbumReadDto From(Album album)
+    public static AlbumReadDto From(Album album)
     {
         return new AlbumReadDto()
         {

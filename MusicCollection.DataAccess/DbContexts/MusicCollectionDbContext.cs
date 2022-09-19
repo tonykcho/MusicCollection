@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using MusicCollection.DataAccess.Common.Interfaces;
 using MusicCollection.Domain.Common.Abstractions;
 
-namespace MusicCollection.DataAccess.DbContaxts;
+namespace MusicCollection.DataAccess.DbContexts;
 
 public class MusicCollectionDbContext : DbContext, IUnitOfWork
 {
@@ -53,7 +53,7 @@ public class MusicCollectionDbContext : DbContext, IUnitOfWork
             }
         }
 
-        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken)
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             cancellationToken.ThrowIfCancellationRequested();
 

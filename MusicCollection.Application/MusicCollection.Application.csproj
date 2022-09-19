@@ -2,7 +2,7 @@
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <ProjectReference Include="..\MusicCollection.Domain\MusicCollection.Models.csproj" />
+    <ProjectReference Include="..\MusicCollection.Domain\MusicCollection.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

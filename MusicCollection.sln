@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCollection.API", "Musi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCollection.Application", "MusicCollection.Application\MusicCollection.Application.csproj", "{3C62DD68-E77A-4625-88BB-85E78B379555}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCollection.Models", "MusicCollection.Domain\MusicCollection.Models.csproj", "{4DD02248-1716-499F-90F8-58C0A0C5BC34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCollection.Domain", "MusicCollection.Domain\MusicCollection.Domain.csproj", "{4DD02248-1716-499F-90F8-58C0A0C5BC34}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCollection.DataAccess", "MusicCollection.DataAccess\MusicCollection.DataAccess.csproj", "{224F50F7-714B-4500-99D1-B55447A572D3}"
 EndProject

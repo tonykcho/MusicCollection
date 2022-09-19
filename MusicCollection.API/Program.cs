@@ -1,6 +1,6 @@
 using MusicCollection.API.Extensions;
 using MusicCollection.API.Caching;
-using MusicCollection.DataAccess.DbContaxts;
+using MusicCollection.DataAccess.DbContexts;
 using StackExchange.Redis;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Mvc;

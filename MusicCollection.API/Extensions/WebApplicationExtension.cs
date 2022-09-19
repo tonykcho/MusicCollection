@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-using MusicCollection.DataAccess.DbContaxts;
+using MusicCollection.DataAccess.DbContexts;
 
 namespace MusicCollection.API.Extensions;
 

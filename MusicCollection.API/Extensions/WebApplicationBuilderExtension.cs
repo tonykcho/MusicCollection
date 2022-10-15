@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.HttpLogging;
+using MusicCollection.Application.Common.Interfaces;
+using MusicCollection.DataAccess.Repositories;
 using Serilog;
 using Serilog.Sinks.Elasticsearch;
 
@@ -11,7 +13,7 @@ public static class WebApplicationBuilderExtension
         Log.Logger = new LoggerConfiguration()
         .MinimumLevel.Information()
         .WriteTo.Console()
-        .WriteTo.File($"logs/log_{DateTime.UtcNow.Date.ToString("yyyy_MM_dd")}.txt")
+        .WriteTo.File($"logs/log_{DateTime.UtcNow.Date:yyyy_MM_dd}.txt")
         .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri($"http://{builder.Configuration["ElasticSearch:Host"]}:{builder.Configuration["ElasticSearch:Port"]}"))
         {
             IndexFormat = $"Music_Collection_API_Logs",
@@ -55,6 +57,6 @@ public static class WebApplicationBuilderExtension
 
     public static void ConfigureDependencyInjections(this WebApplicationBuilder builder)
     {
-        builder.Services.AddHttpContextAccessor();
+        builder.Services.AddScoped<IAlbumRepository, AlbumRepository>();
     }
 }

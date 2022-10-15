@@ -1,4 +1,4 @@
-namespace MusicCollection.DataAccess.Common.Interfaces;
+namespace MusicCollection.Application.Common.Interfaces;
 
 public interface IUnitOfWork
 {

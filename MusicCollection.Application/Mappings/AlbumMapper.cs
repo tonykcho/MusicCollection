@@ -1,7 +1,7 @@
 using MusicCollection.Application.Dtos;
 using MusicCollection.Domain.Entities;
 
-namespace MusicCollection.Application.Common.Mappings;
+namespace MusicCollection.Application.Mappings;
 
 public class AlbumMapper
 {

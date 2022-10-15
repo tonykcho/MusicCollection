@@ -1,3 +1,5 @@
+using System.Reflection;
+using MediatR;
 using MusicCollection.API.Extensions;
 using MusicCollection.API.Caching;
 using MusicCollection.DataAccess.DbContexts;
@@ -16,10 +18,11 @@ builder.Services.AddControllers(options =>
     // options.Filters.Add<AuthorizeFilter>();
 });
 
-builder.Services.Configure<ApiBehaviorOptions>(options =>
-{
-    options.SuppressModelStateInvalidFilter = true;
-});
+//
+// builder.Services.Configure<ApiBehaviorOptions>(options =>
+// {
+//     options.SuppressModelStateInvalidFilter = true;
+// });
 
 builder.Services.AddSingleton<IConnectionMultiplexer>(_ => ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis")!));
 
@@ -34,6 +37,8 @@ builder.Services.AddDataProtection();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddMediatR(Assembly.Load("MusicCollection.Application"));
 
 builder.ConfigureAuth();
 
